@@ -1,0 +1,92 @@
+---
+import logo from '../images/rr_logo_orange.webp'
+---
+
+<nav class="sticky top-0 z-50 w-full border-b border-gray-100 bg-white shadow-sm">
+	<div class="mx-auto max-w-7xl px-3 sm:px-6 lg:px-8">
+		<div class="flex h-16 items-center justify-between sm:h-20">
+			<!-- Logo -->
+			<a href="/" class="flex items-center">
+				<img
+					class="h-8 w-auto transition-transform duration-200 hover:scale-105 sm:h-12"
+					src={logo.src}
+					alt="Rapid Rank Logo"
+				/>
+			</a>
+
+			<!-- Desktop Navigation -->
+			<div class="hidden items-center gap-3 md:flex">
+				<!-- Transitional CTA (Guide) -->
+				<a
+					href="/free-guide"
+					class="whitespace-nowrap px-4 py-2 font-medium text-gray-600 hover:text-gray-900"
+				>
+					Get the Free Guide
+				</a>
+
+				<!-- Primary CTA -->
+				<button
+					class="whitespace-nowrap rounded-lg bg-gradient-to-r from-indigo-500 to-indigo-400 px-5 py-2 font-semibold text-white transition-all duration-200 hover:from-indigo-600 hover:to-indigo-500 hover:shadow-md"
+				>
+					Free Growth Plan
+				</button>
+			</div>
+
+			<!-- Mobile Menu Button -->
+			<button
+				id="mobile-menu-button"
+				class="p-2 text-gray-600 hover:text-gray-900 md:hidden"
+				aria-label="Toggle menu"
+			>
+				<svg
+					class="h-6 w-6"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+				>
+					<path id="menu-icon" d="M4 6h16M4 12h16M4 18h16"></path>
+					<path id="close-icon" class="hidden" d="M6 18L18 6M6 6l12 12"></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+
+	<!-- Mobile Menu -->
+	<div id="mobile-menu" class="hidden border-t border-gray-100 bg-white md:hidden">
+		<div class="space-y-3 px-4 py-6">
+			<!-- Transitional CTA in Mobile Menu -->
+			<a
+				href="/free-guide"
+				class="block rounded-lg border border-gray-200 bg-white px-4 py-3 text-center font-medium text-gray-600 hover:bg-gray-50"
+			>
+				Get the Free Guide
+			</a>
+
+			<!-- Primary CTA in Mobile Menu -->
+			<a
+				href="/growth-plan"
+				class="block rounded-lg bg-gradient-to-r from-indigo-500 to-indigo-400 px-4 py-3 text-center font-semibold text-white hover:from-indigo-600 hover:to-indigo-500"
+			>
+				Free Growth Plan
+			</a>
+		</div>
+	</div>
+</nav>
+
+<script>
+	const mobileMenuButton = document.getElementById('mobile-menu-button')
+	const mobileMenu = document.getElementById('mobile-menu')
+	const menuIcon = document.getElementById('menu-icon')
+	const closeIcon = document.getElementById('close-icon')
+
+	if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
+		mobileMenuButton.addEventListener('click', () => {
+			mobileMenu.classList.toggle('hidden')
+			menuIcon.classList.toggle('hidden')
+			closeIcon.classList.toggle('hidden')
+		})
+	}
+</script>
