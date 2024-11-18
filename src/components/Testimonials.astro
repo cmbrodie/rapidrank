@@ -1,0 +1,95 @@
+---
+import hceLogo from '../images/hce-logo-new.png'
+import aProLogo from '../images/a-pro-logo.svg'
+import derekImage from '../images/derek-image.jpg'
+import allinImage from '../images/allin-image.png'
+---
+
+<section class="bg-gradient-to-b from-gray-50 via-white to-gray-50 py-24 sm:py-32">
+	<div class="mx-auto max-w-7xl px-6 lg:px-8">
+		<div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-16 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+			<!-- First Testimonial Column -->
+			<div class="flex h-full flex-col pb-16 lg:pb-0">
+				<!-- Fixed height logo container -->
+				<div class="flex h-24 items-start">
+					<img class="h-20" src={aProLogo.src} alt="A-Pro Roofing" />
+				</div>
+
+				<!-- Quote container with set spacing -->
+				<div class="mt-12 flex flex-grow flex-col">
+					<blockquote class="relative flex-grow text-lg italic text-gray-900">
+						<!-- Decorative quote -->
+						<svg
+							class="absolute -left-8 -top-12 h-24 w-24 text-blue-500/10"
+							fill="none"
+							viewBox="0 0 100 100"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill="currentColor"
+								d="M44.75 22.35C40.38 26.05 33.21 32.75 30 40.03C29.52 41.11 29.07 42.2 28.67 43.3C31.12 42.21 33.82 41.61 36.62 41.61C45.54 41.61 52.77 48.84 52.77 57.76C52.77 66.68 45.54 73.91 36.62 73.91C26.22 73.91 17.98 64.91 17.98 52.66C17.98 43.76 21.28 35.49 25.82 29.05C30.54 22.37 36.89 17.04 41.23 14.13L44.75 22.35ZM82.02 22.35C77.65 26.05 70.48 32.75 67.27 40.03C66.79 41.11 66.34 42.2 65.94 43.3C68.39 42.21 71.09 41.61 73.89 41.61C82.81 41.61 90.04 48.84 90.04 57.76C90.04 66.68 82.81 73.91 73.89 73.91C63.49 73.91 55.25 64.91 55.25 52.66C55.25 43.76 58.55 35.49 63.09 29.05C67.81 22.37 74.16 17.04 78.5 14.13L82.02 22.35Z"
+							></path>
+						</svg>
+						<p>
+							Our original website was poorly built and bringing in zero new clients - it was
+							completely useless to us. RapidRank built us a professional site that's added
+							substantial revenue to our business. I highly recommend RapidRank for marketing your
+							business.
+						</p>
+					</blockquote>
+
+					<figcaption class="mt-12 flex items-center gap-x-6">
+						<img class="h-14 w-14 rounded-full" src={allinImage.src} alt="Allin Moore" />
+						<div>
+							<div class="font-semibold text-gray-900">Allin Moore</div>
+							<div class="mt-1 text-gray-500">A-Pro Roofing</div>
+						</div>
+					</figcaption>
+				</div>
+			</div>
+
+			<!-- Second Testimonial Column -->
+			<div
+				class="flex h-full flex-col border-t border-gray-900/10 pt-16 lg:border-l lg:border-t-0 lg:pl-16 lg:pt-0"
+			>
+				<!-- Fixed height logo container -->
+				<div class="flex h-24 items-start">
+					<img class="h-24" src={hceLogo.src} alt="Hydroclean Exteriors" />
+				</div>
+
+				<!-- Quote container with set spacing -->
+				<div class="mt-12 flex flex-grow flex-col">
+					<blockquote class="relative flex-grow text-lg italic text-gray-900">
+						<!-- Decorative quote -->
+						<svg
+							class="absolute -left-8 -top-12 h-24 w-24 text-blue-500/10"
+							fill="none"
+							viewBox="0 0 100 100"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								fill="currentColor"
+								d="M44.75 22.35C40.38 26.05 33.21 32.75 30 40.03C29.52 41.11 29.07 42.2 28.67 43.3C31.12 42.21 33.82 41.61 36.62 41.61C45.54 41.61 52.77 48.84 52.77 57.76C52.77 66.68 45.54 73.91 36.62 73.91C26.22 73.91 17.98 64.91 17.98 52.66C17.98 43.76 21.28 35.49 25.82 29.05C30.54 22.37 36.89 17.04 41.23 14.13L44.75 22.35ZM82.02 22.35C77.65 26.05 70.48 32.75 67.27 40.03C66.79 41.11 66.34 42.2 65.94 43.3C68.39 42.21 71.09 41.61 73.89 41.61C82.81 41.61 90.04 48.84 90.04 57.76C90.04 66.68 82.81 73.91 73.89 73.91C63.49 73.91 55.25 64.91 55.25 52.66C55.25 43.76 58.55 35.49 63.09 29.05C67.81 22.37 74.16 17.04 78.5 14.13L82.02 22.35Z"
+							></path>
+						</svg>
+						<p>
+							With my old web development company, you'd ask for a simple change and get passed on
+							to 5 other people, only to find out the change was not what you asked for. With Rapid
+							Rank, I get to speak one on one with a local person who understands our community, and
+							is an expert at both the technical side and the sales/marketing side. Everything Rapid
+							Rank has done for us has sold like crazy.
+						</p>
+					</blockquote>
+
+					<figcaption class="mt-12 flex items-center gap-x-6">
+						<img class="h-14 w-14 rounded-full" src={derekImage.src} alt="Derek Davis" />
+						<div>
+							<div class="font-semibold text-gray-900">Derek Davis</div>
+							<div class="mt-1 text-gray-500">Hydroclean Exteriors</div>
+						</div>
+					</figcaption>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
