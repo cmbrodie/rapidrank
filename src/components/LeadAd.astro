@@ -1,0 +1,109 @@
+<section class="bg-gradient-to-b from-gray-50 via-white to-gray-50 py-16 md:py-24">
+	<div class="mx-auto max-w-3xl px-6">
+		<div class="rounded-lg bg-white p-8 shadow-lg">
+			<div class="text-center">
+				<p class="mb-2 text-sm font-medium text-gray-600">Download our Free Guide:</p>
+				<h2 class="mb-4 text-2xl font-bold text-gray-900 md:text-3xl">
+					The 17 Most Common Problems Stopping Businesses from Making Money Online
+				</h2>
+				<p class="mb-8 text-lg text-gray-600 md:px-14">
+					Discover why your website isn't bringing in leads and exactly how to fix it. Get our free
+					guide to start generating more leads today.
+				</p>
+			</div>
+
+			<form
+				id="guideForm"
+				action="https://formspree.io/f/meoqznzy"
+				method="POST"
+				class="mx-auto max-w-md space-y-4"
+			>
+				<input
+					type="text"
+					name="name"
+					placeholder="Your name"
+					required
+					class="w-full rounded-md border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+				/>
+				<input
+					type="email"
+					name="email"
+					placeholder="Enter your best email"
+					required
+					class="w-full rounded-md border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+				/>
+				<button
+					type="submit"
+					class="w-full rounded-md bg-gradient-to-br from-indigo-500 to-indigo-400 px-6 py-3 font-medium text-white shadow-sm hover:from-indigo-600 hover:to-indigo-500"
+				>
+					Get the Guide
+				</button>
+				<div style="position: absolute; left: -1999px;">
+					<label for="guide_contact_info">Please fill in this field:</label>
+					<input type="text" name="contact_info" id="guide_contact_info" autocomplete="off" />
+				</div>
+			</form>
+			<div id="guideFormMessage" class="hidden p-4 text-center"></div>
+		</div>
+	</div>
+</section>
+
+<script>
+	document.getElementById('guideForm').addEventListener('submit', function (event) {
+		event.preventDefault()
+
+		const form = event.target
+		const formData = new FormData(form)
+		const formMessage = document.getElementById('guideFormMessage')
+
+		if (formData.get('contact_info')) {
+			// Honeypot check
+			form.classList.add('hidden')
+			formMessage.textContent = 'Bye Bye!'
+			formMessage.classList.replace('hidden', 'block')
+			formMessage.classList.add('text-purple-600')
+			formMessage.classList.add('text-2xl')
+			return
+		}
+
+		// Hide form to show message
+		form.classList.add('hidden')
+
+		fetch(form.action, {
+			method: form.method,
+			body: formData,
+			headers: {
+				Accept: 'application/json'
+			}
+		})
+			.then((response) => {
+				if (response.ok) {
+					formMessage.textContent = 'Thanks! Check your email for your guide.'
+					formMessage.classList.replace('hidden', 'block')
+					formMessage.classList.add('text-green-600')
+					formMessage.classList.add('text-2xl')
+				} else {
+					formMessage.textContent = 'Oops! There was a problem with your submission.'
+					formMessage.classList.replace('hidden', 'block')
+					formMessage.classList.add('text-red-600')
+				}
+				// Reset after 7000ms
+				setTimeout(() => {
+					form.reset()
+					form.classList.remove('hidden')
+					formMessage.classList.add('hidden')
+				}, 7000)
+			})
+			.catch((error) => {
+				formMessage.textContent = 'Oops! There was a problem with your submission.'
+				formMessage.classList.replace('hidden', 'block')
+				formMessage.classList.add('text-red-600')
+				// Reset after 3200ms
+				setTimeout(() => {
+					form.reset()
+					form.classList.remove('hidden')
+					formMessage.classList.add('hidden')
+				}, 3200)
+			})
+	})
+</script>

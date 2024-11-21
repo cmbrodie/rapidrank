@@ -182,34 +182,34 @@
 				if (response.ok) {
 					formMessage.textContent = 'Thank you! We will be in touch soon about your growth plan.'
 					formMessage.classList.replace('hidden', 'block')
-					formMessage.classList.add('text-indigo-600')
+					formMessage.classList.add('text-green-600')
 					formMessage.classList.add('text-2xl')
 				} else {
-					formMessage.textContent = 'Oops! There was a problem with your submission.'
+					formMessage.textContent = 'Oops! There was a problem with your submission. Try again'
 					formMessage.classList.replace('hidden', 'block')
 					formMessage.classList.add('text-red-600')
 				}
-				// Close modal after 1600ms
+				// Close modal after 7000ms
 				setTimeout(() => {
 					modal.classList.add('hidden')
 					// Reset form and message for next open
 					form.reset()
 					form.classList.remove('hidden')
 					formMessage.classList.add('hidden')
-				}, 1600)
+				}, 7000)
 			})
 			.catch((error) => {
 				formMessage.textContent = 'Oops! There was a problem with your submission.'
 				formMessage.classList.replace('hidden', 'block')
 				formMessage.classList.add('text-red-600')
-				// Close modal after 1600ms
+				// Close modal after 3200ms
 				setTimeout(() => {
 					modal.classList.add('hidden')
 					// Reset form and message for next open
 					form.reset()
 					form.classList.remove('hidden')
 					formMessage.classList.add('hidden')
-				}, 1600)
+				}, 3200)
 			})
 	})
 </script>
