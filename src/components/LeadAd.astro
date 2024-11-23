@@ -16,28 +16,31 @@
 				id="guideForm"
 				action="https://formspree.io/f/meoqznzy"
 				method="POST"
-				class="mx-auto max-w-md space-y-4"
+				class="mx-auto max-w-md"
 			>
-				<input
-					type="text"
-					name="name"
-					placeholder="Your name"
-					required
-					class="w-full rounded-md border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-				/>
-				<input
-					type="email"
-					name="email"
-					placeholder="Enter your best email"
-					required
-					class="w-full rounded-md border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-				/>
-				<button
-					type="submit"
-					class="w-full rounded-md bg-gradient-to-br from-indigo-500 to-indigo-400 px-6 py-3 font-medium text-white shadow-sm hover:from-indigo-600 hover:to-indigo-500"
-				>
-					Get the Guide
-				</button>
+				<div class="space-y-4">
+					<input
+						type="text"
+						name="name"
+						placeholder="Your name"
+						required
+						class="w-full rounded-md border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+					/>
+					<input
+						type="email"
+						name="email"
+						placeholder="Enter your best email"
+						required
+						class="w-full rounded-md border border-gray-300 px-4 py-3 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+					/>
+					<button
+						type="submit"
+						class="w-full rounded-md bg-gradient-to-br from-indigo-500 to-indigo-400 px-6 py-3 font-medium text-white shadow-sm hover:from-indigo-600 hover:to-indigo-500"
+					>
+						Get the Guide
+					</button>
+				</div>
+				<p class="mt-2 text-center text-sm text-gray-600">Free PDF sent to your inbox</p>
 				<div style="position: absolute; left: -1999px;">
 					<label for="guide_contact_info">Please fill in this field:</label>
 					<input type="text" name="contact_info" id="guide_contact_info" autocomplete="off" />
