@@ -11,6 +11,7 @@ import Footer from '../components/Footer.astro'
 import QuoteModal from '../components/QuoteModal.astro'
 import LeadAd from '../components/LeadAd.astro'
 import '../styles/global.css'
+import logo from '../images/rr_logo_orange.webp'
 ---
 
 <html lang="en">
@@ -45,3 +46,18 @@ import '../styles/global.css'
 		<Footer />
 	</body>
 </html>
+
+<script
+	type="application/ld+json"
+	set:html={JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'LocalBusiness',
+		name: 'Rapid Rank LLC',
+		description:
+			'Rapid Rank LLC builds high-performance websites for small businesses. Our hand-coded sites are faster and perform better in search results. With our 23-point research process, we write effective sales copy that generates a steady stream of leads for your business.',
+		image: logo.src,
+		url: 'https://rapidrank.com',
+		telephone: '(812) 264-2994',
+		email: 'craig@rapidrank.com'
+	})}
+/>
